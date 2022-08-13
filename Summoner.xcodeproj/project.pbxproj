@@ -24,6 +24,8 @@
 		49B4841528A7A08100894A2A /* Summoner+League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4841428A7A08100894A2A /* Summoner+League.swift */; };
 		49B4841B28A7A5CF00894A2A /* Matches+Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4841A28A7A5CF00894A2A /* Matches+Champion.swift */; };
 		49B4841D28A7A70700894A2A /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4841C28A7A70700894A2A /* Matches.swift */; };
+		49B4841F28A7B36A00894A2A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B4841E28A7B36A00894A2A /* Colors.xcassets */; };
+		49B4842128A7B42F00894A2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B4842028A7B42F00894A2A /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		49B4841428A7A08100894A2A /* Summoner+League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Summoner+League.swift"; sourceTree = "<group>"; };
 		49B4841A28A7A5CF00894A2A /* Matches+Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Matches+Champion.swift"; sourceTree = "<group>"; };
 		49B4841C28A7A70700894A2A /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
+		49B4841E28A7B36A00894A2A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		49B4842028A7B42F00894A2A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +85,10 @@
 		490DB3DE28A7909C00851BE3 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
-				490DB3E828A7909D00851BE3 /* Assets.xcassets */,
 				490DB3ED28A7909D00851BE3 /* Info.plist */,
+				490DB3E828A7909D00851BE3 /* Assets.xcassets */,
+				49B4841E28A7B36A00894A2A /* Colors.xcassets */,
+				49B4842028A7B42F00894A2A /* Images.xcassets */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				490DB3EC28A7909D00851BE3 /* LaunchScreen.storyboard in Resources */,
+				49B4842128A7B42F00894A2A /* Images.xcassets in Resources */,
+				49B4841F28A7B36A00894A2A /* Colors.xcassets in Resources */,
 				490DB3E928A7909D00851BE3 /* Assets.xcassets in Resources */,
 				490DB3E728A7909C00851BE3 /* Main.storyboard in Resources */,
 			);
