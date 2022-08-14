@@ -698,7 +698,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="jMZ-of-b1x" secondAttribute="trailing" id="il2-ga-Eca"/>
                                             </constraints>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xM7-tU-yJy">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xM7-tU-yJy" userLabel="detailButton">
                                             <rect key="frame" x="216" y="30" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="5Mk-E3-ahG"/>
@@ -726,6 +726,13 @@
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" name="white"/>
                                 <size key="customSize" width="272" height="100"/>
+                                <connections>
+                                    <outlet property="imageView" destination="syA-3o-g9t" id="IfW-Qj-LY5"/>
+                                    <outlet property="nameLabel" destination="Grc-VP-wE5" id="Ysj-lV-e8P"/>
+                                    <outlet property="pointLabel" destination="jMZ-of-b1x" id="W1B-TX-Smj"/>
+                                    <outlet property="tierLabel" destination="ANm-zf-U5m" id="FHp-Na-DPj"/>
+                                    <outlet property="winLoseLabel" destination="3tP-8m-Ya6" id="vIf-Gd-BIp"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
