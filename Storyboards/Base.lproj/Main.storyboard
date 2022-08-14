@@ -308,7 +308,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="108"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0S-YJ-Z2e">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0S-YJ-Z2e" userLabel="resultView">
                                             <rect key="frame" x="0.0" y="0.0" width="40" height="108"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="승" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0O-bG-iO2" userLabel="winLoseLabel">
@@ -345,7 +345,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="7iI-WT-uVk" secondAttribute="trailing" id="mt7-D5-oxm"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Yg-LR-pNp">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Yg-LR-pNp" userLabel="centerView">
                                             <rect key="frame" x="56" y="16" width="151" height="40"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iJM-5l-SMe" userLabel="championImageView">
@@ -377,7 +377,7 @@
                                                         <constraint firstAttribute="width" constant="19" id="eVG-dg-Sb8"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F31-AS-uqh" userLabel="spellImageView">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F31-AS-uqh" userLabel="spellImageView">
                                                     <rect key="frame" x="65" y="0.0" width="19" height="19"/>
                                                     <color key="backgroundColor" name="paleGrey"/>
                                                     <constraints>
@@ -385,7 +385,7 @@
                                                         <constraint firstAttribute="height" constant="19" id="9fB-d6-Ct6"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJi-w3-TL2" userLabel="spellImageView">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJi-w3-TL2" userLabel="spellImageView">
                                                     <rect key="frame" x="44" y="21" width="19" height="19"/>
                                                     <color key="backgroundColor" name="paleGrey"/>
                                                     <constraints>
@@ -393,7 +393,7 @@
                                                         <constraint firstAttribute="height" constant="19" id="WtZ-Np-IDR"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-dd-F6a" userLabel="spellImageView">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-dd-F6a" userLabel="spellImageView">
                                                     <rect key="frame" x="65" y="21" width="19" height="19"/>
                                                     <color key="backgroundColor" name="paleGrey"/>
                                                     <constraints>
@@ -402,16 +402,19 @@
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVE-64-Pqu" userLabel="container">
-                                                    <rect key="frame" x="92" y="2.3333333333333321" width="59" height="35.666666666666671"/>
+                                                    <rect key="frame" x="92" y="2.3333333333333321" width="59" height="35.333333333333343"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="7 / 2 / 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11S-Kh-i4m" userLabel="killDeathLabel">
-                                                            <rect key="frame" x="0.0" y="0.0" width="59" height="19.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="59" height="19"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="efi-yc-YSC"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="textColor" name="darkGrey"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="킬관여 13%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAv-IJ-v97" userLabel="contributionLabel">
-                                                            <rect key="frame" x="0.0" y="21.333333333333332" width="59" height="14.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="21.000000000000004" width="59" height="14.333333333333332"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" name="gunmetal"/>
                                                             <nil key="highlightedColor"/>
@@ -452,7 +455,7 @@
                                                 <constraint firstItem="DJi-w3-TL2" firstAttribute="top" secondItem="LZv-Gg-aVM" secondAttribute="bottom" constant="2" id="wdd-RN-WjU"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjB-gC-5uk">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjB-gC-5uk" userLabel="itemsView">
                                             <rect key="frame" x="56" y="64" width="180" height="24"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ngv-ln-h1h" userLabel="itemImageView">
@@ -585,6 +588,29 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="championImageView" destination="iJM-5l-SMe" id="lz3-nP-Vvr"/>
+                                    <outlet property="contributionLabel" destination="KAv-IJ-v97" id="e0p-tQ-Qie"/>
+                                    <outlet property="createDateLabel" destination="xsM-iw-Rhk" id="Vse-Bq-xdz"/>
+                                    <outlet property="gameLengthLabel" destination="7iI-WT-uVk" id="sJO-Vc-mrs"/>
+                                    <outlet property="gameTypeLabel" destination="bdK-3m-KFw" id="3lE-0t-66F"/>
+                                    <outlet property="killDeathLabel" destination="11S-Kh-i4m" id="1BH-1W-s5N"/>
+                                    <outlet property="multiKillLabel" destination="2oy-Jo-yKL" id="E6g-hv-ubf"/>
+                                    <outlet property="resultView" destination="k0S-YJ-Z2e" id="qnd-HE-x1e"/>
+                                    <outlet property="scoreBadge" destination="pyl-wU-gSn" id="9Es-pb-mC1"/>
+                                    <outlet property="winLoseLabel" destination="R0O-bG-iO2" id="d6Z-mH-n9B"/>
+                                    <outletCollection property="spellImageViews" destination="LZv-Gg-aVM" collectionClass="NSMutableArray" id="oZA-Ic-DCk"/>
+                                    <outletCollection property="spellImageViews" destination="F31-AS-uqh" collectionClass="NSMutableArray" id="ZGC-Lt-LOP"/>
+                                    <outletCollection property="spellImageViews" destination="DJi-w3-TL2" collectionClass="NSMutableArray" id="r4l-IE-HC9"/>
+                                    <outletCollection property="spellImageViews" destination="ggB-dd-F6a" collectionClass="NSMutableArray" id="1xh-CK-R6M"/>
+                                    <outletCollection property="itemImageViews" destination="ngv-ln-h1h" collectionClass="NSMutableArray" id="4OD-Lc-i5K"/>
+                                    <outletCollection property="itemImageViews" destination="EgC-dR-8Zm" collectionClass="NSMutableArray" id="oGM-tv-s9I"/>
+                                    <outletCollection property="itemImageViews" destination="eNO-it-YHp" collectionClass="NSMutableArray" id="42d-ah-WlV"/>
+                                    <outletCollection property="itemImageViews" destination="oyD-vi-V4c" collectionClass="NSMutableArray" id="0Um-kJ-1m3"/>
+                                    <outletCollection property="itemImageViews" destination="brL-ag-oiv" collectionClass="NSMutableArray" id="sdM-Ix-hcG"/>
+                                    <outletCollection property="itemImageViews" destination="Ihz-Xe-pDV" collectionClass="NSMutableArray" id="9zT-g2-ahl"/>
+                                    <outletCollection property="itemImageViews" destination="kZg-kB-tEz" collectionClass="NSMutableArray" id="Zog-B8-VeF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
