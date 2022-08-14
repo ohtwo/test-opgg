@@ -299,6 +299,21 @@
                                 <constraint firstItem="SZz-pF-RRo" firstAttribute="top" secondItem="AhM-au-gl6" secondAttribute="bottom" id="sxf-DA-l4J"/>
                                 <constraint firstAttribute="trailing" secondItem="AhM-au-gl6" secondAttribute="trailing" id="y7R-yw-DMr"/>
                             </constraints>
+                            <connections>
+                                <outlet property="kdaLabel" destination="l2X-gU-K3G" id="2b7-cq-6Yf"/>
+                                <outlet property="killDeathLabel" destination="N3j-yG-Luu" id="q1y-dm-xvc"/>
+                                <outlet property="levelButton" destination="NOP-99-s4p" id="K4K-K9-GOq"/>
+                                <outlet property="nameLabel" destination="czx-co-nH1" id="wRD-sL-Qom"/>
+                                <outlet property="positionImageView" destination="Yp9-HY-PMN" id="YOc-us-QQs"/>
+                                <outlet property="positionLabel" destination="WTD-c2-KZk" id="p7Y-8W-O40"/>
+                                <outlet property="profileImageView" destination="47B-j2-6H2" id="1aE-Vf-ceo"/>
+                                <outlet property="refreshButton" destination="5uv-iA-3si" id="evq-eO-UTN"/>
+                                <outlet property="winLoseLabel" destination="xgh-cX-A8y" id="Nx6-lr-8YT"/>
+                                <outletCollection property="mostImageViews" destination="bsb-3G-RhO" collectionClass="NSMutableArray" id="Ah3-Js-RN3"/>
+                                <outletCollection property="mostImageViews" destination="uij-qH-PFR" collectionClass="NSMutableArray" id="ZzI-3l-Lay"/>
+                                <outletCollection property="mostLabels" destination="x37-l0-Ci5" collectionClass="NSMutableArray" id="kb3-cs-tt8"/>
+                                <outletCollection property="mostLabels" destination="Si5-a3-PS3" collectionClass="NSMutableArray" id="fxz-wT-K2N"/>
+                            </connections>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SummonerGameCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SummonerGameCell" id="Ejm-jl-Elm" userLabel="SummonerGameCell" customClass="SummonerGameCell" customModule="Summoner" customModuleProvider="target">
