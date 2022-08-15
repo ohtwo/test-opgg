@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SummonerGameCell: UITableViewCell, ReusableView {
 
@@ -14,7 +15,7 @@ class SummonerGameCell: UITableViewCell, ReusableView {
   @IBOutlet weak var gameLengthLabel: UILabel!
   
   @IBOutlet weak var championImageView: UIImageView!
-  @IBOutlet weak var scoreBadge: UIButton!
+  @IBOutlet weak var badgeLabel: UILabel!
   @IBOutlet var spellImageViews: [UIImageView]!
   @IBOutlet var itemImageViews: [UIImageView]!
   
@@ -35,5 +36,96 @@ extension SummonerGameCell {
     super.layoutSubviews()
     
     contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 2, left: 0, bottom: 2, right: 0))
+  }
+  
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    
+    championImageView?.kf.cancelDownloadTask()
+    championImageView?.kf.setImage(with: URL(string: ""))
+    championImageView?.image = nil
+    
+    badgeLabel.isHidden = true
+    badgeLabel.text = nil
+    
+    spellImageViews.forEach { view in
+      view.kf.cancelDownloadTask()
+      view.kf.setImage(with: URL(string: ""))
+      view.image = nil
+    }
+    
+    itemImageViews.forEach { view in
+      view.kf.cancelDownloadTask()
+      view.kf.setImage(with: URL(string: ""))
+      view.image = nil
+    }
+    
+    killDeathLabel.text = nil
+    contributionLabel.text = nil
+    
+    gameTypeLabel.text = nil
+    createDateLabel.text = nil
+    multiKillLabel.text = nil
+  }
+}
+
+extension SummonerGameCell {
+  func configure(with game: Matches.Game) {
+    // Game result
+    resultView.backgroundColor = game.isWin ? .blue : .red
+    winLoseLabel.text = game.isWin ? "승" : "패"
+    gameLengthLabel.text = "\(game.gameLength)"
+    
+    // Champion
+    let url = URL(string: game.champion.imageUrl)
+    championImageView.kf.setImage(with: url) { [weak self] result in
+      guard let self = self else { return }
+      guard case .success = result else { return }
+      self.setNeedsLayout()
+      self.layoutIfNeeded()
+    }
+    
+    // Score badge
+    badgeLabel.isHidden = game.stats.general.badgeHidden
+    badgeLabel.backgroundColor = game.stats.general.badgeColor
+    badgeLabel.text = game.stats.general.opScoreBadge
+    
+    // Spells
+    for (index, spell) in game.spells.enumerated() {
+      guard index < spellImageViews.count else { continue }
+      
+      let view = spellImageViews[index]
+      let url = URL(string: spell.imageUrl)
+      
+      view.kf.setImage(with: url) { [weak self] result in
+        guard let self = self else { return }
+        guard case .success = result else { return }
+        self.setNeedsLayout()
+        self.layoutIfNeeded()
+      }
+    }
+        
+    // Items
+    for (index, item) in game.items.enumerated() {
+      guard index < itemImageViews.count else { continue }
+      
+      guard let view = item.isLastItem ? itemImageViews.last : itemImageViews[index] else { continue }
+      let url = URL(string: item.imageUrl)
+      
+      view.kf.setImage(with: url) { [weak self] result in
+        guard let self = self else { return }
+        guard case .success = result else { return }
+        self.setNeedsLayout()
+        self.layoutIfNeeded()
+      }
+    }
+    
+    // KDA
+    killDeathLabel.text = "\(game.stats.general.kill) / \(game.stats.general.death) / \(game.stats.general.assist)"
+    contributionLabel.text = "킬관여 \(game.stats.general.contributionForKillRate)"
+    
+    gameTypeLabel.text = game.gameType
+    createDateLabel.text = "\(game.createDate)"
+    multiKillLabel.text = game.stats.general.largestMultiKillString
   }
 }

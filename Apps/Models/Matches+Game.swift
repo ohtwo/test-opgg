@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension Matches {
   struct Game: Decodable {
@@ -13,9 +14,9 @@ extension Matches {
     let spells: [Game.Image]
     let items: [Game.Image]
     
-    let createDate: Double
+    let createDate: UInt
     let gameType: String
-    let gameLength: Double
+    let gameLength: UInt
     let isWin: Bool
     
     let stats: Stats
@@ -35,6 +36,12 @@ extension Matches.Game {
   }
 }
 
+extension Matches.Game.Image {
+  var isLastItem: Bool {
+    return imageUrl.lowercased().hasSuffix("3340.png")
+  }
+}
+
 extension Matches.Game {
   struct Stats: Decodable {
     let general: General
@@ -48,8 +55,19 @@ extension Matches.Game.Stats {
     let death: Int
     let assist: Int
     
-    let opScoreBadge: String
     let contributionForKillRate: String
+    let largestMultiKillString: String
+    let opScoreBadge: String
+  }
+}
+
+extension Matches.Game.Stats.General {
+  var badgeHidden: Bool {
+    return opScoreBadge.count == 0
+  }
+  
+  var badgeColor: UIColor {
+    return opScoreBadge == "MVP" ? .yellow : .purple
   }
 }
 

@@ -13,3 +13,12 @@ struct Matches: Decodable {
   let positions: [Position]
   let summary: Summary
 }
+
+extension Matches {
+  init() {
+    games = []
+    champions = []
+    positions = []
+    summary = Summary()
+  }
+}

@@ -16,3 +16,14 @@ extension Matches {
     let assists: Int
   }
 }
+
+extension Matches.Summary {
+  init() {
+    wins = 0
+    losses = 0
+    kills = 0
+    deaths = 0
+    assists = 0
+  }
+}
+
