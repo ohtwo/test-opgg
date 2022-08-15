@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SummonerGameCell: UITableViewCell {
+class SummonerGameCell: UITableViewCell, ReusableView {
 
   @IBOutlet weak var resultView: UIView!
   @IBOutlet weak var winLoseLabel: UILabel!

@@ -23,7 +23,7 @@ extension SummonerViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "SummonerGameCell")
-    return cell ?? UITableViewCell()
+    let cell = tableView.dequeueReusableCell(for: indexPath) as SummonerGameCell
+    return cell
   }
 }

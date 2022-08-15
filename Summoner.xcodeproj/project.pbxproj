@@ -30,6 +30,7 @@
 		49B4841D28A7A70700894A2A /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4841C28A7A70700894A2A /* Matches.swift */; };
 		49B4841F28A7B36A00894A2A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B4841E28A7B36A00894A2A /* Colors.xcassets */; };
 		49B4842128A7B42F00894A2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B4842028A7B42F00894A2A /* Images.xcassets */; };
+		49D1209E28AA162B00F678C4 /* UIView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1209D28AA162B00F678C4 /* UIView+Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		49B4841C28A7A70700894A2A /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
 		49B4841E28A7B36A00894A2A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		49B4842028A7B42F00894A2A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		49D1209D28AA162B00F678C4 /* UIView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Reusable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				490DB3DF28A7909C00851BE3 /* AppDelegate.swift */,
 				490DB3E128A7909C00851BE3 /* SceneDelegate.swift */,
+				49D1209A28AA145400F678C4 /* Extensions */,
 				49B4840328A793E900894A2A /* HttpClients */,
 				49B4840428A793F500894A2A /* HttpRouters */,
 				49B4840F28A7987100894A2A /* Models */,
@@ -163,6 +166,14 @@
 				49B4841428A7A08100894A2A /* Summoner+League.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		49D1209A28AA145400F678C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				49D1209D28AA162B00F678C4 /* UIView+Reusable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +266,7 @@
 				490DB3E228A7909C00851BE3 /* SceneDelegate.swift in Sources */,
 				49B4840A28A7946700894A2A /* Parameters.swift in Sources */,
 				49B4840E28A795B300894A2A /* HttpRouter+Summoner.swift in Sources */,
+				49D1209E28AA162B00F678C4 /* UIView+Reusable.swift in Sources */,
 				49926A7828A8BA7000023F15 /* SummonerViewController.swift in Sources */,
 				49926A8228A8BCB900023F15 /* SummonerTierCell.swift in Sources */,
 				49B4840C28A794F700894A2A /* HttpRouter.swift in Sources */,

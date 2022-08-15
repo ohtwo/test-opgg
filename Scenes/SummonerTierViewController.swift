@@ -17,7 +17,7 @@ class SummonerTierViewController: UICollectionViewController {
   }
 }
 
-// MARK: UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 
 extension SummonerTierViewController {
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -25,7 +25,7 @@ extension SummonerTierViewController {
   }
 
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+    let cell = collectionView.dequeueReusableCell(for: indexPath) as SummonerTierCell
 
     return cell
   }

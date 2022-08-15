@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SummonerTierCell: UICollectionViewCell {
+class SummonerTierCell: UICollectionViewCell, ReusableView {
     
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
