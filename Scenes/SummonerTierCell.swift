@@ -39,6 +39,6 @@ extension SummonerTierCell {
     nameLabel.text = league.tierRank.name
     tierLabel.text = league.tierRank.tier
     pointLabel.text = "\(league.tierRank.lp) LP"
-    winLoseLabel.text = "\(league.wins)승 \(league.losses)패 (\(league.winRate)%)"
+    winLoseLabel.text = "\(league.wins)승 \(league.losses)패 (\(league.winRateString))"
   }
 }

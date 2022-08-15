@@ -17,8 +17,8 @@ extension Summoner {
 }
 
 extension Summoner.League {
-  var winRate: Double {
+  var winRateString: String {
     let rate = Double(wins) / Double(wins + losses) * 100.0
-    return ceil(rate)
+    return String(format: "%.0f%%", rate)
   }
 }

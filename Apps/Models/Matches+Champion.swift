@@ -22,3 +22,19 @@ extension Matches {
     let losses: Int
   }
 }
+
+extension Matches.Champion {
+  var winRate: Double {
+    return Double(wins) / Double(games) * 100.0
+  }
+  
+  var winRateString: String {
+    return String(format: "%.0f%%", winRate)
+  }
+  
+  var fixedImageUrl: URL? {
+    // Server-side imageUrl error
+    // e.g. [name: "판테온", imageUrl: "//opgg-static.akamaized.net/..."]
+    return imageUrl.hasPrefix("https:") ? URL(string: imageUrl) : URL(string: "https:\(imageUrl)")
+  }
+}
