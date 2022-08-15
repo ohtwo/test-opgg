@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SummonerHeaderView: UIView {
 
@@ -23,4 +24,20 @@ class SummonerHeaderView: UIView {
   
   @IBOutlet weak var positionImageView: UIImageView!
   @IBOutlet weak var positionLabel: UILabel!
+}
+
+extension SummonerHeaderView {
+  func configure(with summoner: Summoner) {
+    let url = URL(string: summoner.profileImageUrl)
+    
+    profileImageView.kf.setImage(with: url) { [weak self] result in
+      guard let self = self else { return }
+      guard case .success = result else { return }
+      self.setNeedsLayout()
+      self.layoutIfNeeded()
+    }
+    
+    nameLabel.text = summoner.name
+    levelButton.titleLabel?.text = "\(summoner.level)"
+  }
 }

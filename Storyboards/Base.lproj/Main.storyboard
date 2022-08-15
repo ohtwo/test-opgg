@@ -39,18 +39,18 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOP-99-s4p" userLabel="levelButton">
-                                            <rect key="frame" x="49.666666666666657" y="88" width="54.333333333333343" height="24"/>
+                                            <rect key="frame" x="80" y="88" width="24" height="24"/>
+                                            <color key="backgroundColor" name="darkGrey90"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="qiz-ag-z7b"/>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="qyq-jE-ytK"/>
                                             </constraints>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="filled" title="99999" cornerStyle="capsule">
-                                                <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
-                                                <directionalEdgeInsets key="contentInsets" top="0.0" leading="8" bottom="0.0" trailing="8"/>
-                                                <color key="baseForegroundColor" name="white"/>
-                                                <color key="baseBackgroundColor" name="darkGrey90"/>
-                                            </buttonConfiguration>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="0">
+                                                <color key="titleColor" name="white"/>
+                                            </state>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uv-iA-3si" userLabel="refreshButton">
                                             <rect key="frame" x="120" y="72" width="97" height="40"/>
@@ -671,7 +671,7 @@
                                                     <color key="textColor" name="darkGrey"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="145승 152패 (48%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tP-8m-Ya6" userLabel="winLoseLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="145승 152패 (48%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3tP-8m-Ya6" userLabel="winLoseLabel">
                                                     <rect key="frame" x="0.0" y="58" width="124" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" name="steelGrey"/>
@@ -759,7 +759,7 @@
             <color red="0.11764705882352941" green="0.12549019607843137" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="darkGrey90">
-            <color red="0.11800000071525574" green="0.125" blue="0.13300000131130219" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.11764705882352941" green="0.12549019607843137" blue="0.13333333333333333" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="darkishPink">
             <color red="0.9100000262260437" green="0.25099998712539673" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
