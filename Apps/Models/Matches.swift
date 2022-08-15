@@ -10,4 +10,6 @@ import Foundation
 struct Matches: Decodable {
   let games: [Game]
   let champions: [Champion]
+  let positions: [Position]
+  let summary: Summary
 }

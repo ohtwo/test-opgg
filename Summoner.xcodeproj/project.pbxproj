@@ -31,6 +31,8 @@
 		49B4841F28A7B36A00894A2A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B4841E28A7B36A00894A2A /* Colors.xcassets */; };
 		49B4842128A7B42F00894A2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B4842028A7B42F00894A2A /* Images.xcassets */; };
 		49D1209E28AA162B00F678C4 /* UIView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1209D28AA162B00F678C4 /* UIView+Reusable.swift */; };
+		49D120A028AA1A9400F678C4 /* Matches+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1209F28AA1A9400F678C4 /* Matches+Position.swift */; };
+		49D120A228AA1AAE00F678C4 /* Matches+Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D120A128AA1AAE00F678C4 /* Matches+Summary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		49B4841E28A7B36A00894A2A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		49B4842028A7B42F00894A2A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		49D1209D28AA162B00F678C4 /* UIView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Reusable.swift"; sourceTree = "<group>"; };
+		49D1209F28AA1A9400F678C4 /* Matches+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Matches+Position.swift"; sourceTree = "<group>"; };
+		49D120A128AA1AAE00F678C4 /* Matches+Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Matches+Summary.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,8 @@
 				49B4841C28A7A70700894A2A /* Matches.swift */,
 				49B4841A28A7A5CF00894A2A /* Matches+Champion.swift */,
 				49B4841228A79A2E00894A2A /* Matches+Game.swift */,
+				49D1209F28AA1A9400F678C4 /* Matches+Position.swift */,
+				49D120A128AA1AAE00F678C4 /* Matches+Summary.swift */,
 				49B4841028A7993300894A2A /* Summoner.swift */,
 				49B4841428A7A08100894A2A /* Summoner+League.swift */,
 			);
@@ -266,8 +272,10 @@
 				490DB3E228A7909C00851BE3 /* SceneDelegate.swift in Sources */,
 				49B4840A28A7946700894A2A /* Parameters.swift in Sources */,
 				49B4840E28A795B300894A2A /* HttpRouter+Summoner.swift in Sources */,
+				49D120A028AA1A9400F678C4 /* Matches+Position.swift in Sources */,
 				49D1209E28AA162B00F678C4 /* UIView+Reusable.swift in Sources */,
 				49926A7828A8BA7000023F15 /* SummonerViewController.swift in Sources */,
+				49D120A228AA1AAE00F678C4 /* Matches+Summary.swift in Sources */,
 				49926A8228A8BCB900023F15 /* SummonerTierCell.swift in Sources */,
 				49B4840C28A794F700894A2A /* HttpRouter.swift in Sources */,
 				49B4841D28A7A70700894A2A /* Matches.swift in Sources */,
