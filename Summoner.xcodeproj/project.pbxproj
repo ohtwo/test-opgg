@@ -35,6 +35,7 @@
 		49D120A228AA1AAE00F678C4 /* Matches+Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D120A128AA1AAE00F678C4 /* Matches+Summary.swift */; };
 		49D120A528AA20FF00F678C4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 49D120A428AA20FF00F678C4 /* Kingfisher */; };
 		49D120A828AA212B00F678C4 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 49D120A728AA212B00F678C4 /* SwiftDate */; };
+		49D120AA28AA541400F678C4 /* Summoner+TierRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D120A928AA541400F678C4 /* Summoner+TierRank.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		49D1209D28AA162B00F678C4 /* UIView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Reusable.swift"; sourceTree = "<group>"; };
 		49D1209F28AA1A9400F678C4 /* Matches+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Matches+Position.swift"; sourceTree = "<group>"; };
 		49D120A128AA1AAE00F678C4 /* Matches+Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Matches+Summary.swift"; sourceTree = "<group>"; };
+		49D120A928AA541400F678C4 /* Summoner+TierRank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Summoner+TierRank.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				49D120A128AA1AAE00F678C4 /* Matches+Summary.swift */,
 				49B4841028A7993300894A2A /* Summoner.swift */,
 				49B4841428A7A08100894A2A /* Summoner+League.swift */,
+				49D120A928AA541400F678C4 /* Summoner+TierRank.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				49D120A028AA1A9400F678C4 /* Matches+Position.swift in Sources */,
 				49D1209E28AA162B00F678C4 /* UIView+Reusable.swift in Sources */,
 				49926A7828A8BA7000023F15 /* SummonerViewController.swift in Sources */,
+				49D120AA28AA541400F678C4 /* Summoner+TierRank.swift in Sources */,
 				49D120A228AA1AAE00F678C4 /* Matches+Summary.swift in Sources */,
 				49926A8228A8BCB900023F15 /* SummonerTierCell.swift in Sources */,
 				49B4840C28A794F700894A2A /* HttpRouter.swift in Sources */,

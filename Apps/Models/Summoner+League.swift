@@ -9,14 +9,16 @@ import Foundation
 
 extension Summoner {
   struct League: Decodable {
+    let hasResults: Bool
     let wins: Int
     let losses: Int
+    let tierRank: TierRank
   }
 }
 
 extension Summoner.League {
-  struct TierRank: Decodable {
-    let name: String
-    let imageUrl: String
+  var winRate: Double {
+    let rate = Double(wins) / Double(wins + losses) * 100.0
+    return ceil(rate)
   }
 }
