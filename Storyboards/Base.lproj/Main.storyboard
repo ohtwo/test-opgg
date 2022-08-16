@@ -610,10 +610,6 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="w4A-2Z-Opa" id="Dwn-eJ-hVh"/>
-                            <outlet property="delegate" destination="w4A-2Z-Opa" id="bce-q8-j4Z"/>
-                        </connections>
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJc-ig-c4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -732,10 +728,6 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="ZHv-rg-nrC" id="HeS-ov-2cg"/>
-                            <outlet property="delegate" destination="ZHv-rg-nrC" id="vGp-Qo-on9"/>
-                        </connections>
                     </collectionView>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZtU-gf-sQ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -773,7 +765,7 @@
             <color red="1" green="0.66299998760223389" blue="0.019999999552965164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="paleGrey">
-            <color red="0.96899998188018799" green="0.96899998188018799" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96862745098039216" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="softBlue">
             <color red="0.32499998807907104" green="0.51399999856948853" blue="0.9100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

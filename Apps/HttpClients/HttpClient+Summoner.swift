@@ -23,8 +23,8 @@ extension HttpClient {
     return details
   }
   
-  static func fetchMatches(of name: String) -> Observable<Matches> {
-    let route = HttpRouter.Summoner.matches(name: name)
+  static func fetchMatches(of name: String, last: Int? = nil) -> Observable<Matches> {
+    let route = HttpRouter.Summoner.matches(name: name, last: last)
     
     let matches = Observable.just(route)
       .flatMap({ route -> Observable<(HTTPURLResponse, Matches)> in

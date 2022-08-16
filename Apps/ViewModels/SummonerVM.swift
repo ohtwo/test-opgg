@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 
 class SummonerVM: NSObject {
-  private let bag = DisposeBag()
+  let bag = DisposeBag()
   
   let name: String
   
@@ -21,6 +21,7 @@ class SummonerVM: NSObject {
   
   var matches = BehaviorRelay<Matches?>(value: nil)
   var games = BehaviorRelay<[Matches.Game]>(value: [])
+  var isFetching = false
   
   init(name: String) {
     self.name = name
@@ -52,5 +53,11 @@ extension SummonerVM {
     sharedMatches.map({ $0.games })
       .bind(to: games)
       .disposed(by: bag)
+  }
+}
+
+extension Bool {
+  var toggled: Bool {
+    return !self
   }
 }

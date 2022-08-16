@@ -11,7 +11,7 @@ import Alamofire
 extension HttpRouter {
   enum Summoner {
     case details(name: String)
-    case matches(name: String)
+    case matches(name: String, last: Int? = nil)
   }
 }
 
@@ -20,8 +20,13 @@ extension HttpRouter.Summoner: HttpRoutable {
   
   var path: String {
     switch self {
-    case let .details(name):  return "/\(endpoint)/\(name)"
-    case let .matches(name):  return "/\(endpoint)/\(name)/matches"
+    case let .details(name):      return "/\(endpoint)/\(name)"
+    case let .matches(name, _):   return "/\(endpoint)/\(name)/matches"
     }
+  }
+  
+  var parameters: Parameters? {
+    guard case let .matches(_, last) = self, let last = last else { return nil }
+    return Parameters(encodable: ["lastMatch": last])
   }
 }

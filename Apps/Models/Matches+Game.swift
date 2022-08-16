@@ -14,9 +14,9 @@ extension Matches {
     let spells: [Game.Image]
     let items: [Game.Image]
     
-    let createDate: UInt
+    let createDate: Int
     let gameType: String
-    let gameLength: UInt
+    let gameLength: Int
     let isWin: Bool
     
     let stats: Stats

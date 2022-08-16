@@ -36,6 +36,7 @@ extension SummonerViewController {
   func bindUI() {
     // Setup data source
     tableView.dataSource = viewModel
+    tableView.prefetchDataSource = viewModel
     collectionView.dataSource = viewModel
     
     // Bind data to UI
