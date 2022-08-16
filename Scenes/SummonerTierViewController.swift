@@ -7,9 +7,13 @@
 
 import UIKit
 
-private let reuseIdentifier = "SummonerTierCell"
-
 class SummonerTierViewController: UICollectionViewController {
+  
+  var leagues: [Summoner.League] = [] {
+    didSet {
+      collectionView.reloadData()
+    }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -17,15 +21,16 @@ class SummonerTierViewController: UICollectionViewController {
   }
 }
 
-// MARK: - UICollectionViewDataSource
-
 extension SummonerTierViewController {
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 10
+    return leagues.count
   }
 
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(for: indexPath) as SummonerTierCell
+    
+    let league = leagues[indexPath.item]
+    cell.configure(with: league)
 
     return cell
   }
