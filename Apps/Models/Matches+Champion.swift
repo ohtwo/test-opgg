@@ -1,5 +1,5 @@
 //
-//  Champion.swift
+//  Matches+Champion.swift
 //  Summoner
 //
 //  Created by Kang Byeonghak on 2022/08/13.

@@ -14,6 +14,8 @@
 		490DB3EC28A7909D00851BE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490DB3EA28A7909D00851BE3 /* LaunchScreen.storyboard */; };
 		498EFD8428AB98B30087F660 /* SummonerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498EFD8328AB98B30087F660 /* SummonerVM.swift */; };
 		498EFD8928ABCA8B0087F660 /* RxOptional in Frameworks */ = {isa = PBXBuildFile; productRef = 498EFD8828ABCA8B0087F660 /* RxOptional */; };
+		498EFD8B28ABE14F0087F660 /* SummonerVM+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498EFD8A28ABE14F0087F660 /* SummonerVM+UITableView.swift */; };
+		498EFD8D28ABE4520087F660 /* SummonerVM+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498EFD8C28ABE4520087F660 /* SummonerVM+UICollectionView.swift */; };
 		49926A7828A8BA7000023F15 /* SummonerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49926A7728A8BA7000023F15 /* SummonerViewController.swift */; };
 		49926A7E28A8BC5C00023F15 /* SummonerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49926A7D28A8BC5C00023F15 /* SummonerHeaderView.swift */; };
 		49926A8028A8BC9B00023F15 /* SummonerGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49926A7F28A8BC9B00023F15 /* SummonerGameCell.swift */; };
@@ -52,6 +54,8 @@
 		490DB3EB28A7909D00851BE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		490DB3ED28A7909D00851BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		498EFD8328AB98B30087F660 /* SummonerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerVM.swift; sourceTree = "<group>"; };
+		498EFD8A28ABE14F0087F660 /* SummonerVM+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SummonerVM+UITableView.swift"; sourceTree = "<group>"; };
+		498EFD8C28ABE4520087F660 /* SummonerVM+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SummonerVM+UICollectionView.swift"; sourceTree = "<group>"; };
 		49926A7728A8BA7000023F15 /* SummonerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerViewController.swift; sourceTree = "<group>"; };
 		49926A7D28A8BC5C00023F15 /* SummonerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerHeaderView.swift; sourceTree = "<group>"; };
 		49926A7F28A8BC9B00023F15 /* SummonerGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerGameCell.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				498EFD8328AB98B30087F660 /* SummonerVM.swift */,
+				498EFD8A28ABE14F0087F660 /* SummonerVM+UITableView.swift */,
+				498EFD8C28ABE4520087F660 /* SummonerVM+UICollectionView.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -299,7 +305,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				49B4840828A7944900894A2A /* HttpRoutable.swift in Sources */,
+				498EFD8B28ABE14F0087F660 /* SummonerVM+UITableView.swift in Sources */,
 				49B4841B28A7A5CF00894A2A /* Matches+Champion.swift in Sources */,
+				498EFD8D28ABE4520087F660 /* SummonerVM+UICollectionView.swift in Sources */,
 				49B4841128A7993300894A2A /* Summoner.swift in Sources */,
 				49926A7E28A8BC5C00023F15 /* SummonerHeaderView.swift in Sources */,
 				490DB3E028A7909C00851BE3 /* AppDelegate.swift in Sources */,

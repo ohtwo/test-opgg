@@ -1,5 +1,5 @@
 //
-//  UIView+Extensions.swift
+//  UIView+Reusable.swift
 //  Summoner
 //
 //  Created by Kang Byeonghak on 2022/08/15.
