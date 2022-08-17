@@ -57,5 +57,10 @@ extension SummonerViewController {
     viewModel.games.asDriver()
       .drive(onNext: { [weak self] _ in self?.tableView.reloadData() })
       .disposed(by: bag)
+    
+    
+    headerView.refreshButton.rx.tap
+      .subscribe(onNext: viewModel.bind)
+      .disposed(by: bag)
   }
 }

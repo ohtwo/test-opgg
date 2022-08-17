@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 
 class SummonerVM: NSObject {
-  let bag = DisposeBag()
+  private(set) var bag = DisposeBag()
   
   let name: String
   
@@ -34,6 +34,9 @@ class SummonerVM: NSObject {
 
 extension SummonerVM {
   func bind() {
+    // Dispose all
+    bag = DisposeBag()
+    
     // Fetch summoner and bind
     let sharedSummoner = HttpClient.fetchSummoner(of: name).share()
     

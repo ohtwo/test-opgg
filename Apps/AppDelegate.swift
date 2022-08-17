@@ -12,6 +12,10 @@ import SwiftDate
 class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
+    // Remove constraint messages in console.
+    UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+    
+    // SwiftDate
     SwiftDate.defaultRegion = Region.local
     
     return true
