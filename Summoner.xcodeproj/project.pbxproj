@@ -23,6 +23,7 @@
 		49926A8428A9123E00023F15 /* SummonerTierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49926A8328A9123E00023F15 /* SummonerTierViewController.swift */; };
 		49AC59F828AD025C006AF8E7 /* UIView+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC59F728AD025C006AF8E7 /* UIView+CALayer.swift */; };
 		49AC59FA28AD114F006AF8E7 /* UIColor+Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC59F928AD114F006AF8E7 /* UIColor+Named.swift */; };
+		49AC59FC28AD3269006AF8E7 /* Foundation+Divide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC59FB28AD3269006AF8E7 /* Foundation+Divide.swift */; };
 		49B4840228A7937500894A2A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 49B4840128A7937500894A2A /* Alamofire */; };
 		49B4840628A7942D00894A2A /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4840528A7942D00894A2A /* HttpClient.swift */; };
 		49B4840828A7944900894A2A /* HttpRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4840728A7944900894A2A /* HttpRoutable.swift */; };
@@ -65,6 +66,7 @@
 		49926A8328A9123E00023F15 /* SummonerTierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerTierViewController.swift; sourceTree = "<group>"; };
 		49AC59F728AD025C006AF8E7 /* UIView+CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CALayer.swift"; sourceTree = "<group>"; };
 		49AC59F928AD114F006AF8E7 /* UIColor+Named.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Named.swift"; sourceTree = "<group>"; };
+		49AC59FB28AD3269006AF8E7 /* Foundation+Divide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Divide.swift"; sourceTree = "<group>"; };
 		49B4840528A7942D00894A2A /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		49B4840728A7944900894A2A /* HttpRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRoutable.swift; sourceTree = "<group>"; };
 		49B4840928A7946700894A2A /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
@@ -214,9 +216,10 @@
 		49D1209A28AA145400F678C4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				49AC59FB28AD3269006AF8E7 /* Foundation+Divide.swift */,
+				49AC59F928AD114F006AF8E7 /* UIColor+Named.swift */,
 				49AC59F728AD025C006AF8E7 /* UIView+CALayer.swift */,
 				49D1209D28AA162B00F678C4 /* UIView+Reusable.swift */,
-				49AC59F928AD114F006AF8E7 /* UIColor+Named.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				49B4841B28A7A5CF00894A2A /* Matches+Champion.swift in Sources */,
 				498EFD8D28ABE4520087F660 /* SummonerVM+UICollectionView.swift in Sources */,
 				49B4841128A7993300894A2A /* Summoner.swift in Sources */,
+				49AC59FC28AD3269006AF8E7 /* Foundation+Divide.swift in Sources */,
 				49926A7E28A8BC5C00023F15 /* SummonerHeaderView.swift in Sources */,
 				490DB3E028A7909C00851BE3 /* AppDelegate.swift in Sources */,
 				49AC59FA28AD114F006AF8E7 /* UIColor+Named.swift in Sources */,

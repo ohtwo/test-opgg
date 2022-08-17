@@ -75,7 +75,7 @@ extension SummonerGameCell {
     // Game result
     resultView.backgroundColor = game.isWin ? .softBlue : .darkishPink
     winLoseLabel.text = game.isWin ? "승" : "패"
-    gameLengthLabel.text = "\(game.gameLength)"
+    gameLengthLabel.text = game.gameLengthString
     
     // Champion
     let url = URL(string: game.champion.imageUrl)
@@ -126,7 +126,7 @@ extension SummonerGameCell {
     contributionLabel.text = "킬관여 \(game.stats.general.contributionForKillRate)"
     
     gameTypeLabel.text = game.gameType
-    createDateLabel.text = "\(game.createDate)"
+    createDateLabel.text = game.createDateString
     
     multiKillButton.setTitle(game.stats.general.largestMultiKillString, for: .normal)
     multiKillButton.isHidden = game.stats.general.isMultiKillHidden

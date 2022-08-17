@@ -5,8 +5,8 @@
 //  Created by Kang Byeonghak on 2022/08/13.
 //
 
-import Foundation
 import UIKit
+import SwiftDate
 
 extension Matches {
   struct Game: Decodable {
@@ -33,6 +33,20 @@ extension Matches.Game {
 extension Matches.Game {
   struct Image: Decodable {
     let imageUrl: String
+  }
+}
+
+extension Matches.Game {
+  var gameLengthString: String {
+    let h: ldiv_t = divide(gameLength, 3600)
+    let m: ldiv_t = divide(h.rem, 60)
+
+    return String(format: "%02d:%02d", m.quot, m.rem)
+  }
+  
+  var createDateString: String {
+    let date = Date(timeIntervalSince1970: TimeInterval(createDate))
+    return date.toRelative()
   }
 }
 
