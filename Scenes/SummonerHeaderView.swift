@@ -49,8 +49,8 @@ extension SummonerHeaderView {
     // Summary
     let summary = matches.summary
     winLoseLabel.text = "\(summary.wins)승 \(summary.losses)패"
-    killDeathLabel.text = "\(summary.kills) / \(summary.deaths) / \(summary.assists)"
-    kdaLabel.text = "\(summary.kdaString) (\(summary.winRateString))"
+    killDeathLabel.attributedText = summary.attributedKillDeathText
+    kdaLabel.attributedText = summary.attributedKDAText
     
     // Most
     let champions = matches.champions.sorted(by: { $0.winRate > $1.winRate })
@@ -61,6 +61,7 @@ extension SummonerHeaderView {
       
       mostImageViews[index].kf.setImage(with: champion.fixedImageUrl)
       mostLabels[index].text = champion.winRateString
+      mostLabels[index].textColor = champion.winRateColor
     }
     
     // Postion

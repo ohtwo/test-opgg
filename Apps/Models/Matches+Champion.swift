@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension Matches {
   struct Champion: Decodable {
@@ -30,6 +31,10 @@ extension Matches.Champion {
   
   var winRateString: String {
     return String(format: "%.0f%%", winRate)
+  }
+  
+  var winRateColor: UIColor {
+    return winRate == Double(100) ? .darkishPink : .darkGrey
   }
   
   var fixedImageUrl: URL? {

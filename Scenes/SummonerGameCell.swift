@@ -122,7 +122,7 @@ extension SummonerGameCell {
     }
     
     // KDA
-    killDeathLabel.text = "\(game.stats.general.kill) / \(game.stats.general.death) / \(game.stats.general.assist)"
+    killDeathLabel.attributedText = game.stats.general.attributedKillDeathText
     contributionLabel.text = "킬관여 \(game.stats.general.contributionForKillRate)"
     
     gameTypeLabel.text = game.gameType

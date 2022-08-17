@@ -73,6 +73,39 @@ extension Matches.Game.Stats.General {
   var isMultiKillHidden: Bool {
     return largestMultiKillString.count == 0
   }
+  
+  var attributedKillDeathText: NSAttributedString {
+    typealias Attributes = [NSAttributedString.Key : Any]
+    
+    let attrGray: Attributes = [
+      .font: UIFont.systemFont(ofSize: 16.0, weight: .bold),
+      .foregroundColor: UIColor.charcoalGrey
+    ]
+    
+    let attrPink: Attributes = [
+      .font: UIFont.systemFont(ofSize: 16.0, weight: .bold),
+      .foregroundColor: UIColor.darkishPink
+    ]
+    
+    let attrSlash: Attributes = [
+      .font: UIFont.systemFont(ofSize: 16.0, weight: .regular),
+      .foregroundColor: UIColor.charcoalGrey
+    ]
+    
+    let kill = NSMutableAttributedString(string: "\(kill)", attributes: attrGray)
+    let death = NSMutableAttributedString(string: "\(death)", attributes: attrPink)
+    let assist = NSMutableAttributedString(string: "\(assist)", attributes: attrGray)
+    let slash = NSMutableAttributedString(string: " / ", attributes: attrSlash)
+    
+    let attributed = NSMutableAttributedString()
+    attributed.append(kill)
+    attributed.append(slash)
+    attributed.append(death)
+    attributed.append(slash)
+    attributed.append(assist)
+    
+    return attributed
+  }
 }
 
 extension Matches.Game.Stats {
