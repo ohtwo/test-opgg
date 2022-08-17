@@ -24,7 +24,7 @@ class SummonerGameCell: UITableViewCell, ReusableView {
   
   @IBOutlet weak var gameTypeLabel: UILabel!
   @IBOutlet weak var createDateLabel: UILabel!
-  @IBOutlet weak var multiKillLabel: UILabel!
+  @IBOutlet weak var multiKillButton: UIButton!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -65,14 +65,15 @@ extension SummonerGameCell {
     
     gameTypeLabel.text = nil
     createDateLabel.text = nil
-    multiKillLabel.text = nil
+    multiKillButton.setTitle(nil, for: .normal)
+    multiKillButton.isHidden = true
   }
 }
 
 extension SummonerGameCell {
   func configure(with game: Matches.Game) {
     // Game result
-    resultView.backgroundColor = game.isWin ? .blue : .red
+    resultView.backgroundColor = game.isWin ? .softBlue : .darkishPink
     winLoseLabel.text = game.isWin ? "승" : "패"
     gameLengthLabel.text = "\(game.gameLength)"
     
@@ -86,7 +87,7 @@ extension SummonerGameCell {
     }
     
     // Score badge
-    badgeLabel.isHidden = game.stats.general.badgeHidden
+    badgeLabel.isHidden = game.stats.general.isBadgeHidden
     badgeLabel.backgroundColor = game.stats.general.badgeColor
     badgeLabel.text = game.stats.general.opScoreBadge
     
@@ -126,6 +127,8 @@ extension SummonerGameCell {
     
     gameTypeLabel.text = game.gameType
     createDateLabel.text = "\(game.createDate)"
-    multiKillLabel.text = game.stats.general.largestMultiKillString
+    
+    multiKillButton.setTitle(game.stats.general.largestMultiKillString, for: .normal)
+    multiKillButton.isHidden = game.stats.general.isMultiKillHidden
   }
 }

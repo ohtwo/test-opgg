@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w4A-2Z-Opa">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -31,6 +32,9 @@
                                                 <constraint firstAttribute="height" constant="88" id="GaO-Jm-mar"/>
                                                 <constraint firstAttribute="width" constant="88" id="WPd-kd-dkX"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPGG" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czx-co-nH1" userLabel="nameLabel">
                                             <rect key="frame" x="120" y="24" width="69" height="29"/>
@@ -51,19 +55,35 @@
                                             <state key="normal" title="00">
                                                 <color key="titleColor" name="white"/>
                                             </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uv-iA-3si" userLabel="refreshButton">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uv-iA-3si" userLabel="refreshButton">
                                             <rect key="frame" x="120" y="72" width="97" height="40"/>
+                                            <color key="backgroundColor" name="softBlue"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="7YL-np-8Kk"/>
                                                 <constraint firstAttribute="height" constant="40" id="Yrh-Th-GrM"/>
                                             </constraints>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="filled" title="전적갱신" cornerStyle="capsule" titleAlignment="center">
-                                                <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
-                                                <color key="baseForegroundColor" name="white"/>
-                                                <color key="baseBackgroundColor" name="softBlue"/>
-                                            </buttonConfiguration>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="전적갱신">
+                                                <color key="titleColor" name="white"/>
+                                            </state>
+                                            <state key="selected">
+                                                <color key="titleColor" name="steelGrey"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" name="steelGrey"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="20"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" name="backgroud"/>
@@ -161,6 +181,9 @@
                                                                         <constraint firstAttribute="width" constant="30" id="L1B-AK-qRX"/>
                                                                         <constraint firstAttribute="height" constant="30" id="yvm-dS-CrV"/>
                                                                     </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x37-l0-Ci5" userLabel="mostLabel">
                                                                     <rect key="frame" x="0.0" y="34" width="30" height="12"/>
@@ -189,6 +212,9 @@
                                                                         <constraint firstAttribute="width" constant="30" id="4yx-4l-Ca5"/>
                                                                         <constraint firstAttribute="height" constant="30" id="bgh-bF-yz3"/>
                                                                     </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Si5-a3-PS3" userLabel="mostLabel">
                                                                     <rect key="frame" x="0.0" y="34" width="30" height="12"/>
@@ -370,6 +396,9 @@
                                                         <constraint firstAttribute="width" constant="40" id="d3Q-J9-OF9"/>
                                                         <constraint firstAttribute="height" constant="40" id="zUG-sd-Od3"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MVP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAk-Nm-LRP" userLabel="badgeLabel">
                                                     <rect key="frame" x="4" y="30" width="32" height="16"/>
@@ -381,6 +410,17 @@
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                     <color key="textColor" name="white"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="white"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LZv-Gg-aVM" userLabel="spellImageView">
                                                     <rect key="frame" x="44" y="0.0" width="19" height="19"/>
@@ -389,6 +429,11 @@
                                                         <constraint firstAttribute="height" constant="19" id="7Yo-iA-vda"/>
                                                         <constraint firstAttribute="width" constant="19" id="eVG-dg-Sb8"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F31-AS-uqh" userLabel="spellImageView">
                                                     <rect key="frame" x="65" y="0.0" width="19" height="19"/>
@@ -397,6 +442,9 @@
                                                         <constraint firstAttribute="width" constant="19" id="7Wc-r2-0wx"/>
                                                         <constraint firstAttribute="height" constant="19" id="9fB-d6-Ct6"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJi-w3-TL2" userLabel="spellImageView">
                                                     <rect key="frame" x="44" y="21" width="19" height="19"/>
@@ -405,6 +453,11 @@
                                                         <constraint firstAttribute="width" constant="19" id="HqE-sv-Eom"/>
                                                         <constraint firstAttribute="height" constant="19" id="WtZ-Np-IDR"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-dd-F6a" userLabel="spellImageView">
                                                     <rect key="frame" x="65" y="21" width="19" height="19"/>
@@ -413,6 +466,9 @@
                                                         <constraint firstAttribute="width" constant="19" id="8v7-vf-j2b"/>
                                                         <constraint firstAttribute="height" constant="19" id="N2D-dj-zqs"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="00 / 00 / 00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11S-Kh-i4m" userLabel="killDeathLabel">
                                                     <rect key="frame" x="92" y="2" width="89.333333333333314" height="19"/>
@@ -464,6 +520,11 @@
                                                         <constraint firstAttribute="height" constant="24" id="C9f-KW-rqy"/>
                                                         <constraint firstAttribute="width" constant="24" id="FXB-m6-kx5"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EgC-dR-8Zm" userLabel="itemImageView">
                                                     <rect key="frame" x="26" y="0.0" width="24" height="24"/>
@@ -472,6 +533,11 @@
                                                         <constraint firstAttribute="height" constant="24" id="EBx-oN-WpQ"/>
                                                         <constraint firstAttribute="width" constant="24" id="c2U-ji-xFR"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eNO-it-YHp" userLabel="itemImageView">
                                                     <rect key="frame" x="52" y="0.0" width="24" height="24"/>
@@ -480,6 +546,11 @@
                                                         <constraint firstAttribute="height" constant="24" id="C3c-jb-uPW"/>
                                                         <constraint firstAttribute="width" constant="24" id="uo2-cS-vmY"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oyD-vi-V4c" userLabel="itemImageView">
                                                     <rect key="frame" x="78" y="0.0" width="24" height="24"/>
@@ -488,6 +559,11 @@
                                                         <constraint firstAttribute="height" constant="24" id="2Sb-C5-Fzs"/>
                                                         <constraint firstAttribute="width" constant="24" id="jfl-mf-stR"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="brL-ag-oiv" userLabel="itemImageView">
                                                     <rect key="frame" x="104" y="0.0" width="24" height="24"/>
@@ -496,6 +572,11 @@
                                                         <constraint firstAttribute="height" constant="24" id="IaQ-iL-isn"/>
                                                         <constraint firstAttribute="width" constant="24" id="nGJ-Sb-zl9"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ihz-Xe-pDV" userLabel="itemImageView">
                                                     <rect key="frame" x="130" y="0.0" width="24" height="24"/>
@@ -504,6 +585,11 @@
                                                         <constraint firstAttribute="height" constant="24" id="ju3-UK-8z6"/>
                                                         <constraint firstAttribute="width" constant="24" id="qbr-Cj-mQy"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kZg-kB-tEz" userLabel="itemImageView">
                                                     <rect key="frame" x="156" y="0.0" width="24" height="24"/>
@@ -512,6 +598,9 @@
                                                         <constraint firstAttribute="width" constant="24" id="rwK-2c-vEC"/>
                                                         <constraint firstAttribute="height" constant="24" id="x42-pv-6jB"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -552,36 +641,50 @@
                                             <color key="textColor" name="coolGrey"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쿼드라 킬" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oy-Jo-yKL" userLabel="multiKillLabel">
+                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbC-JP-211" userLabel="multiKillButton">
                                             <rect key="frame" x="320" y="66" width="54" height="20"/>
                                             <color key="backgroundColor" name="white"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="54" id="Zqq-jP-yfy"/>
-                                                <constraint firstAttribute="height" constant="20" id="sqg-ZX-saj"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="DC1-hY-OyT"/>
+                                                <constraint firstAttribute="height" constant="20" id="tUm-Lx-UpM"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                            <color key="textColor" name="darkishPink"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="쿼드라 킬">
+                                                <color key="titleColor" name="darkishPink"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" name="darkishPink"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" name="white"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="bdK-3m-KFw" secondAttribute="trailing" constant="16" id="1Tn-Rt-obt"/>
                                         <constraint firstItem="xsM-iw-Rhk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Yg-LR-pNp" secondAttribute="trailing" constant="8" id="EXw-qa-yxF"/>
-                                        <constraint firstAttribute="trailing" secondItem="2oy-Jo-yKL" secondAttribute="trailing" constant="16" id="HPK-q0-8zS"/>
                                         <constraint firstItem="xsM-iw-Rhk" firstAttribute="top" secondItem="bdK-3m-KFw" secondAttribute="bottom" constant="1" id="I6Z-Pd-zub"/>
-                                        <constraint firstItem="2oy-Jo-yKL" firstAttribute="centerY" secondItem="bjB-gC-5uk" secondAttribute="centerY" id="Lkl-HW-aeb"/>
                                         <constraint firstItem="bjB-gC-5uk" firstAttribute="leading" secondItem="k0S-YJ-Z2e" secondAttribute="trailing" constant="16" id="Nso-di-GGE"/>
-                                        <constraint firstItem="2oy-Jo-yKL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bjB-gC-5uk" secondAttribute="trailing" constant="8" id="OFZ-ub-z4W"/>
                                         <constraint firstItem="k0S-YJ-Z2e" firstAttribute="top" secondItem="zgt-aA-bTK" secondAttribute="top" id="QBc-sj-zY7"/>
                                         <constraint firstAttribute="trailing" secondItem="xsM-iw-Rhk" secondAttribute="trailing" constant="16" id="RbH-tE-mYN"/>
                                         <constraint firstItem="bdK-3m-KFw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Yg-LR-pNp" secondAttribute="trailing" constant="8" id="WcG-mU-pPZ"/>
+                                        <constraint firstItem="RbC-JP-211" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bjB-gC-5uk" secondAttribute="trailing" constant="8" id="ZBY-vM-3QU"/>
                                         <constraint firstItem="bdK-3m-KFw" firstAttribute="top" secondItem="zgt-aA-bTK" secondAttribute="top" constant="16" id="ZmA-V3-LOn"/>
                                         <constraint firstItem="6Yg-LR-pNp" firstAttribute="leading" secondItem="k0S-YJ-Z2e" secondAttribute="trailing" constant="16" id="hub-OO-f1o"/>
+                                        <constraint firstAttribute="trailing" secondItem="RbC-JP-211" secondAttribute="trailing" constant="16" id="jMf-7g-7wh"/>
                                         <constraint firstItem="bjB-gC-5uk" firstAttribute="top" secondItem="6Yg-LR-pNp" secondAttribute="bottom" constant="8" id="oX0-8z-BKr"/>
                                         <constraint firstAttribute="bottom" secondItem="k0S-YJ-Z2e" secondAttribute="bottom" id="t54-aA-SNA"/>
                                         <constraint firstItem="k0S-YJ-Z2e" firstAttribute="leading" secondItem="zgt-aA-bTK" secondAttribute="leading" id="uML-Rh-nf6"/>
                                         <constraint firstItem="6Yg-LR-pNp" firstAttribute="top" secondItem="zgt-aA-bTK" secondAttribute="top" constant="16" id="wDh-pc-c7E"/>
+                                        <constraint firstItem="RbC-JP-211" firstAttribute="centerY" secondItem="bjB-gC-5uk" secondAttribute="centerY" id="yrN-ao-T4U"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -593,7 +696,7 @@
                                     <outlet property="gameLengthLabel" destination="7iI-WT-uVk" id="sJO-Vc-mrs"/>
                                     <outlet property="gameTypeLabel" destination="bdK-3m-KFw" id="3lE-0t-66F"/>
                                     <outlet property="killDeathLabel" destination="11S-Kh-i4m" id="1BH-1W-s5N"/>
-                                    <outlet property="multiKillLabel" destination="2oy-Jo-yKL" id="E6g-hv-ubf"/>
+                                    <outlet property="multiKillButton" destination="RbC-JP-211" id="ga1-hM-Oa0"/>
                                     <outlet property="resultView" destination="k0S-YJ-Z2e" id="qnd-HE-x1e"/>
                                     <outlet property="winLoseLabel" destination="R0O-bG-iO2" id="d6Z-mH-n9B"/>
                                     <outletCollection property="spellImageViews" destination="LZv-Gg-aVM" collectionClass="NSMutableArray" id="oZA-Ic-DCk"/>
@@ -640,7 +743,6 @@
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="syA-3o-g9t" userLabel="imageView">
                                             <rect key="frame" x="12" y="18" width="64" height="64"/>
-                                            <color key="backgroundColor" name="paleGrey"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="64" id="1EI-og-6Rf"/>
                                                 <constraint firstAttribute="width" constant="64" id="B5G-dX-2Rr"/>
@@ -693,14 +795,16 @@
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xM7-tU-yJy" userLabel="detailButton">
                                             <rect key="frame" x="216" y="30" width="40" height="40"/>
+                                            <color key="backgroundColor" name="paleGrey"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="5Mk-E3-ahG"/>
                                                 <constraint firstAttribute="width" constant="40" id="iz8-B5-gt6"/>
                                             </constraints>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <buttonConfiguration key="configuration" style="filled" image="icon_arrow_right" cornerStyle="capsule">
-                                                <color key="baseBackgroundColor" name="paleGrey"/>
-                                            </buttonConfiguration>
+                                            <state key="normal" image="icon_arrow_right"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -719,6 +823,11 @@
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" name="white"/>
                                 <size key="customSize" width="272" height="100"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="imageView" destination="syA-3o-g9t" id="IfW-Qj-LY5"/>
                                     <outlet property="nameLabel" destination="Grc-VP-wE5" id="Ysj-lV-e8P"/>

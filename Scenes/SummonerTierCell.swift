@@ -18,6 +18,12 @@ class SummonerTierCell: UICollectionViewCell, ReusableView {
 }
 
 extension SummonerTierCell {
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    
+    dropShadow(color: .gray, opacity: 0.1, offSet: CGSize(width: 0.0, height: 0.5), radius: 4)
+  }
+  
   override func prepareForReuse() {
     super.prepareForReuse()
     

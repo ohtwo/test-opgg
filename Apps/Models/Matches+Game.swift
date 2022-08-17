@@ -62,12 +62,16 @@ extension Matches.Game.Stats {
 }
 
 extension Matches.Game.Stats.General {
-  var badgeHidden: Bool {
+  var isBadgeHidden: Bool {
     return opScoreBadge.count == 0
   }
   
   var badgeColor: UIColor {
-    return opScoreBadge == "MVP" ? .yellow : .purple
+    return opScoreBadge == "MVP" ? .orangeYellow : .periwinkle
+  }
+  
+  var isMultiKillHidden: Bool {
+    return largestMultiKillString.count == 0
   }
 }
 
