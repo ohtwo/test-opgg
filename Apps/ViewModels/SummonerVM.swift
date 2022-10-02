@@ -12,55 +12,65 @@ import RxSwift
 import RxCocoa
 
 class SummonerVM: NSObject {
-  private(set) var bag = DisposeBag()
-  
-  let name: String
+  private let disposeBag = DisposeBag()
   
   var summoner = BehaviorRelay<Summoner?>(value: nil)
   var leagues = BehaviorRelay<[Summoner.League]>(value: [])
   
   var matches = BehaviorRelay<Matches?>(value: nil)
   var games = BehaviorRelay<[Matches.Game]>(value: [])
-  var isFetching = false
+  var fetchDate = BehaviorRelay<Int?>(value: nil)
   
   init(name: String) {
-    self.name = name
-    
     super.init()
     
-    bind()
+    bind(name)
   }
 }
 
 extension SummonerVM {
-  func bind() {
-    // Dispose all
-    bag = DisposeBag()
-    
+  private func bind(_ name: String) {
     // Fetch summoner and bind
-    let sharedSummoner = HttpClient.fetchSummoner(of: name).share()
+    let sharedSummoner = fetchDate
+      .filter({ $0 == nil })
+      .map({ _ in })
+      .flatMapLatest({
+        HttpClient.fetchSummoner(of: name)
+      })
+      .share()
     
     sharedSummoner.bind(to: summoner)
-      .disposed(by: bag)
+      .disposed(by: disposeBag)
     
     sharedSummoner.map({ $0.leagues })
       .bind(to: leagues)
-      .disposed(by: bag)
+      .disposed(by: disposeBag)
     
     // Fetch matches and bind
-    let sharedMatches = HttpClient.fetchMatches(of: name).share()
+    let sharedMatches = fetchDate
+      .flatMapLatest({
+        HttpClient.fetchMatches(of: name, last: $0)
+      })
+      .share()
     
     sharedMatches.bind(to: matches)
-      .disposed(by: bag)
+      .disposed(by: disposeBag)
     
-    sharedMatches.map({ $0.games })
+    sharedMatches.map(\.games)
+      .map({ [weak self] games -> [Matches.Game] in
+        guard let self = self else { return [] }
+        return self.games.value + games
+      })
       .bind(to: games)
-      .disposed(by: bag)
+      .disposed(by: disposeBag)
   }
-}
-
-extension Bool {
-  var toggled: Bool {
-    return !self
+  
+  func fetch(_ date: Int? = nil) {
+    fetchDate.accept(date)
+  }
+  
+  func refresh() {
+    games.accept([])
+    fetchDate.accept(nil)
   }
 }
